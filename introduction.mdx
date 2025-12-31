@@ -1,0 +1,95 @@
+---
+title: Welcome to A F
+description: Discover A F, your default documentation space for organizing and managing project documentation efficiently.
+---
+
+## Overview
+
+A F provides a centralized space to create, organize, and manage all your project documentation. You can build structured docs sites with MDX support, version history, and seamless collaboration. Start organizing your technical guides, API references, and user manuals today.
+
+## Key Features
+
+A F offers powerful tools to streamline your documentation workflow.
+
+<Columns cols={3}>
+  <Card title="MDX-Powered Pages" icon="book-open" href="#mdx-support">
+    Write rich documentation using MDX components for interactive content like tabs, steps, and code examples.
+  </Card>
+  <Card title="Version Control" icon="git-branch" href="#versioning">
+    Track changes with built-in Git integration and rollback to previous versions effortlessly.
+  </Card>
+  <Card title="Collaboration" icon="users" href="#collaboration">
+    Invite team members, assign roles, and review changes in real-time.
+  </Card>
+</Columns>
+
+<Callout kind="tip">
+  Customize your docs site with themes and your brand color `{`#3B82F6`}` for a professional look.
+</Callout>
+
+## Quick Navigation
+
+Jump to essential sections to get started quickly.
+
+<Columns cols={2}>
+  <Card title="Quickstart Guide" icon="rocket" href="/quickstart">
+    Set up your first documentation space in under 5 minutes.
+  </Card>
+  <Card title="Authentication" icon="lock" href="/authentication">
+    Secure your docs with API keys and user management.
+  </Card>
+  <Card title="Configuration" icon="settings" href="/configuration">
+    Tailor your docs site with advanced options.
+  </Card>
+  <Card title="Changelog" icon="git-commit" href="/changelog">
+    Stay updated with the latest features and fixes.
+  </Card>
+</Columns>
+
+## Getting Started
+
+Follow these steps to create your first documentation page.
+
+<Steps>
+  <Step title="Create a New Space" icon="plus">
+    Log in to your A F dashboard at `https://dashboard.example.com` and click **New Space**.
+
+    Select your project and configure basic settings like name and description.
+  </Step>
+  <Step title="Add Your First Page" icon="file-text">
+    Navigate to the **Pages** section and create `introduction.mdx`.
+
+    Use the built-in editor to add frontmatter and content.
+  </Step>
+  <Step title="Preview and Publish" icon="eye">
+    Preview your page with live MDX rendering, then publish to make it live.
+  </Step>
+</Steps>
+
+Here is a basic code example for your first MDX page:
+
+<CodeGroup tabs="MDX,Bash">
+  ```mdx
+  ---
+  title: My First Page
+  description: Welcome to my docs.
+  ---
+
+  ## Hello World
+
+  This is your first documentation page.
+  ```
+  ```
+  bash
+  # Upload via CLI
+  af upload introduction.mdx --space=my-project
+  ```
+</CodeGroup>
+
+## Next Steps
+
+Explore advanced features like custom components and integrations. Check the <a href="/quickstart">Quickstart</a> for detailed setup or dive into <a href="/authentication">authentication</a> for secure access.
+
+<Callout kind="info">
+  Need help? Visit the help center or contact support at `support@af.com`.
+</Callout>

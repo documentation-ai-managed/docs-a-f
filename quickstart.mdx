@@ -1,0 +1,123 @@
+---
+title: Getting Started with A F
+description: Set up your A F account and create your first documentation project in just a few minutes.
+---
+
+## Prerequisites
+
+Before you begin, ensure you have the following ready:
+
+<Callout kind="info">
+
+- A valid email address for account verification
+- Access to a modern web browser like Chrome or Firefox
+- Optional: Node.js installed for CLI usage (`>={18}`)
+
+</Callout>
+
+## Create Your A F Account
+
+Sign up for A F in under a minute. Follow these steps to get started.
+
+<Steps>
+  <Step title="Visit the Dashboard" icon="globe">
+    Open your browser and navigate to `https://dashboard.example.com`.
+  </Step>
+  <Step title="Sign Up" icon="user-plus">
+    Click **Sign Up** and complete the form with your email, name, and a secure password. Verify your email via the confirmation link sent to your inbox.
+  </Step>
+  <Step title="Log In" icon="log-in">
+    Return to the dashboard and enter your credentials. You'll land on the main interface.
+  </Step>
+</Steps>
+
+## Create a New Documentation Space
+
+A documentation space organizes your project's docs. Create one now.
+
+<Steps>
+  <Step title="Select New Space" icon="plus">
+    From the dashboard, click **New Space** in the top-right corner.
+  </Step>
+  <Step title="Configure Space" icon="settings">
+    Enter a name like `My Project Docs`, select **Public** or **Private** visibility, and choose a starter template such as "Basic Markdown".
+  </Step>
+  <Step title="Launch Space" icon="rocket">
+    Click **Create**. Your new space opens with a welcome `README.mdx` file.
+  </Step>
+</Steps>
+
+## Upload Your First Files
+
+Add your project files using the web interface or CLI. Choose your preferred method.
+
+<Tabs>
+  <Tab title="Web UI" icon="upload">
+    Drag files directly into the file tree panel or click **Upload** > **Browse**. Supported formats include `.mdx`, `.md`, images, and assets up to `10MB`.
+
+    <Image
+      src="https://example.com/upload-demo.png"
+      alt="Drag and drop files into the A F editor"
+      width="800"
+      height="500"
+    />
+  </Tab>
+  <Tab title="CLI" icon="terminal">
+    Install the A F CLI first, then upload.
+
+    <CodeGroup tabs="npm,yarn">
+      ````bash
+      npm install -g @a-f/cli
+      ````
+
+      ````bash
+      yarn global add @a-f/cli
+      ````
+    </CodeGroup>
+
+    Authenticate and upload:
+
+    ````bash
+    af login --email your@email.com
+    af space upload my-project-docs ./src/docs
+    ````
+  </Tab>
+</Tabs>
+
+<Callout kind="tip">
+  Use the CLI for automation in CI/CD pipelines. Set `AF_API_KEY={YOUR_API_KEY}` as an environment variable for non-interactive auth.
+</Callout>
+
+## Basic Interface Tour
+
+Familiarize yourself with key areas using this overview.
+
+<Columns cols={3}>
+  <Card title="File Tree" icon="git-branch" href="#file-tree">
+    Navigate and manage your `.mdx` files here.
+  </Card>
+  <Card title="Editor" icon="edit-3" href="#editor">
+    Real-time preview with syntax highlighting for MDX.
+  </Card>
+  <Card title="Publish" icon="globe" href="#publish">
+    One-click deployment to `https://docs.example.com/your-space`.
+  </Card>
+</Columns>
+
+## Next Steps
+
+Congratulations! You've set up A F and created your first space.
+
+<Expandable title="Explore Advanced Features" default-open="false">
+
+Dive deeper with these resources:
+
+- Customize themes and layouts
+- Integrate with GitHub for version control
+- Set up custom domains
+
+</Expandable>
+
+<Callout kind="success">
+  Ready for more? Check your space at `https://docs.example.com/my-project-docs` and edit the `README.mdx` to personalize it.
+</Callout>

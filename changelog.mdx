@@ -1,0 +1,116 @@
+---
+title: Changelog
+description: Track the latest updates and improvements to A F, ensuring you stay informed about new features and fixes.
+---
+
+## Recent Updates
+
+<Update label="2024-10-15" description="v1.3.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added real-time collaboration support for teams working on documentation projects.
+- Introduced customizable themes with your brand color `#3B82F6` for personalized docs spaces.
+
+## Improvements
+
+- Enhanced search functionality to find content across all your documentation pages faster.
+- Optimized performance for large documentation sites with `<100ms` load times.
+
+## Bug Fixes
+
+- Fixed issue where embedded images failed to load in preview mode.
+- Resolved authentication errors during session renewals.
+
+</Update>
+
+<Update label="2024-09-25" description="v1.2.0" tags={["bugfix", "security"]}>
+
+## New Features
+
+- Integrated webhook support for syncing changes to external services.
+
+## Bug Fixes
+
+- Patched security vulnerability in API token handling (CVE-2024-XXXX).
+- Corrected export functionality for MDX files with nested components.
+
+## Improvements
+
+- Streamlined the UI for managing documentation hierarchies.
+
+</Update>
+
+<Update label="2024-08-10" description="v1.1.0" tags={["feature", "breaking"]}>
+
+## Breaking Changes
+
+- Updated default API endpoint from `/v1` to `/v2` – update your integrations.
+
+## New Features
+
+- Launched core documentation management with MDX support.
+- Added version history tracking for pages.
+
+## Improvements
+
+- Better mobile responsiveness for editing interfaces.
+
+</Update>
+
+## How to Upgrade
+
+<Callout kind="info">
+Review the breaking changes in each release before upgrading your A F instance.
+</Callout>
+
+Follow these steps to upgrade to the latest version:
+
+<Steps>
+  <Step title="Backup Your Data" icon="database">
+    Export your current documentation:
+
+````bash
+af-cli export --all --output ./backup-$(date +%Y%m%d)
+````
+  </Step>
+  <Step title="Install Latest Version" icon="download">
+    Use your package manager:
+
+    <CodeGroup tabs="npm,yarn">
+````bash
+npm install af@latest
+````
+````bash
+yarn add af@latest
+````
+    </CodeGroup>
+  </Step>
+  <Step title="Run Migration" icon="settings">
+    Apply database migrations:
+
+````bash
+af migrate up
+````
+  </Step>
+  <Step title="Restart Service" icon="refresh-cw">
+    Restart your A F server and verify at `https://dashboard.example.com`.
+  </Step>
+</Steps>
+
+## Upcoming Features
+
+Stay ahead with these previews:
+
+<Columns cols={2}>
+  <Card title="AI-Powered Editing" icon="bot" href="#">
+    Generate documentation drafts using natural language prompts.
+  </Card>
+  <Card title="Advanced Analytics" icon="bar-chart-3" href="#">
+    Track page views and engagement metrics across your docs site.
+  </Card>
+</Columns>
+
+<Callout kind="tip">
+Subscribe to our newsletter or watch the GitHub repo at `https://github.com/af/docs` for release announcements. You can contribute feedback directly via issues.
+</Callout>
